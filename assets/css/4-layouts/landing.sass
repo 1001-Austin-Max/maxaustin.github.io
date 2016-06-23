@@ -1,0 +1,100 @@
+header.home
+  .about-nav
+    position: absolute
+    top: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    ul
+      width: 30%
+      display: flex
+      justify-content: space-between
+      list-style-type: none
+      padding: 0
+      a
+        color: white
+        background: rgba(darkgray, 0.3)
+        transition: all 0.2s ease-in-out
+        li
+          padding: 5px 0
+          width: 80px
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background:
+    image: url(/assets/img/landing-bg.jpg)
+    size: cover
+    position: center
+
+  text-align: center
+  min-height: 100vh
+
+  .landing-container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    *
+      color: white
+    .landing-title
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 50px
+      .landing-line-deco
+        border-radius: 20px
+        background: white
+        width: 100px
+        height: 10px
+        @media(max-width: 525px)
+          display: none
+      .site-name
+        font-family: "Damion", cursive
+        margin: 0 20px
+        text-shadow: 3px 3px 20px rgba(#39f2e7, 0.5)
+        *
+          margin: 0
+    nav.landing-nav
+      ul
+        list-style-type: none
+        padding: 0
+        display: flex
+        justify-content: space-between
+
+        li
+          margin-top: 10px
+          display: block
+          text-align: center
+          background: #FF9D00
+          padding: 6px 50px
+          cursor: pointer
+          position: relative
+          transition: all 0.5s ease-in-out
+          &:hover
+            .see-more
+              width: 100%
+              height: 100%
+              opacity: 1
+
+          .see-more
+            transition: all 0.5s ease-in-out
+            opacity: 0
+            position: absolute
+            top: 0
+            left: 0
+            background: rgba(white, 0.7)
+            width: 0
+            height: 0%
+            overflow: hidden
+
+            p
+              margin-top: 6px
+              color: black
+
+        @media(max-width: 452px)
+          flex-direction: column
+          align-items: center
+
+          li
+            width: 80%
