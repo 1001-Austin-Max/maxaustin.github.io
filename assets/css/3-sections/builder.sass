@@ -1,0 +1,32 @@
+section.builder
+  background-image: url(/assets/img/builder-bg.jpg)
+  .desc
+    .title
+      background: rgba(217, 205, 50, 0.71)
+  .page-content
+    position: relative
+    justify-content: center
+    .carousel-container
+      z-index: 1
+      margin-bottom: 30px
+      .carousel
+        display: flex
+        position: absolute
+        top: 200px
+        left: -45vw
+        @media (max-width: 561px)
+          position: relative
+          top: 0
+        .builder-project
+          @include trapezoid(230px, 175px)
+    .button
+      margin-top: 200px
+      width: 50%
+      height: 50px
+      background: rgb(233, 118, 76)
+      font-size: 18px
+      @media (max-width: 561px)
+        margin-top: 10px
+  &.min
+    .arrow-container
+      background: rgb(189, 126, 60)
