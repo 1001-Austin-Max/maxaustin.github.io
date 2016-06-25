@@ -1,19 +1,16 @@
 $(function(){
   landingLinkClick();
   arrowContainerClick();
-  carouselScroll();
 });
-
-//landing functions
 
 function landingLinkClick(){
   $('header.home nav li').on('click',function(){
     var $this = $(this),
-        section = $('section.'+$this.attr('id'));
-        console.log(section.offset().top);
-    section.removeClass('min');
-    animateScroll(section);
-    toggleArrow(section);
+        section = $('section.'+$this.text());
+    section.removeClass('min',function(){
+      animateScroll(section);
+      toggleArrow(section);
+    });
   });
 }
 
@@ -35,12 +32,6 @@ function toggleArrow(sect){
       sect.children('.arrow-container').children('i').html('keyboard_arrow_up');
       animateScroll(sect);
     }
-}
-
-//carousel functions
-
-function carouselScroll(){
-  
 }
 
 //general functions
